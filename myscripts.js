@@ -14,7 +14,7 @@ let days = [
 
 let day = days[now.getDay()];
 let hour = now.getHours();
-let minutes = now.getMinutes();
+let minutes = (`0` + now.getMinutes()).slice(-2);
 
 let time = document.querySelector("#time");
 time.innerHTML = `${day}, ${hour}:${minutes}`;
