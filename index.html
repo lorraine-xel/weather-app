@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <form class="form-inline searchbar" id="search-form">
+          <div class="form-group mx-sm-3 mb-2">
+            <input
+              type="search"
+              class="form-control"
+              id="search"
+              placeholder="Look up a city"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary mb-2">🔍</button>
+        </form>
+
+        <div class="row">
+          <div class="col statistics">
+            <h2>Stats</h2>
+            <div class="row">
+              <div class="col stat-titles">
+                <p>Clouds</p>
+                <p>Percipitation</p>
+                <p>Winds</p>
+              </div>
+
+              <div class="col stats">
+                <p>Cloudy</p>
+                <p>70%</p>
+                <p>5 km/h</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col city">
+            <p id="time">13:46 PM</p>
+            <p id="greeting">Good evening, name</p>
+            <p id="forecast">Here is the weather forecast for...</p>
+            <h2 id="current-city">Utrecht</h2>
+          </div>
+
+          <div class="col searches">
+            <h2>Recent searches</h2>
+            <p>Damascus</p>
+            <p>Portsmouth</p>
+            <p>Seoul</p>
+          </div>
+        </div>
+        <hr />
+        <div class="future-forecast card-deck">
+          <div class="card" style="width: 12rem">
+            <img
+              class="card-img-top"
+              src="media/sun.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <p>10/16</p>
+              <p>Monday</p>
+            </div>
+          </div>
+          <div class="card" style="width: 12rem">
+            <img
+              class="card-img-top"
+              src="media/sun.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <p>10/16</p>
+              <p>Monday</p>
+            </div>
+          </div>
+          <div class="card" style="width: 12rem">
+            <img
+              class="card-img-top"
+              src="media/sun.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <p>10/16</p>
+              <p>Monday</p>
+            </div>
+          </div>
+          <div class="card" style="width: 12rem">
+            <img
+              class="card-img-top"
+              src="media/sun.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <p>10/16</p>
+              <p>Monday</p>
+            </div>
+          </div>
+          <div class="card" style="width: 12rem">
+            <img
+              class="card-img-top"
+              src="media/sun.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <p>10/16</p>
+              <p>Monday</p>
+            </div>
+          </div>
+          <div class="card" style="width: 12rem">
+            <img
+              class="card-img-top"
+              src="media/sun.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <p>10/16</p>
+              <p>Monday</p>
+            </div>
+          </div>
+          <div class="card" style="width: 12rem">
+            <img
+              class="card-img-top"
+              src="media/sun.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <p>10/16</p>
+              <p>Monday</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="myscripts.js"></script>
+  </body>
+</html>
