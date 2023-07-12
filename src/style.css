@@ -55,6 +55,10 @@ h2 {
   font-weight: bold;
 }
 
+#search-button {
+  font-size: 0.875rem;
+}
+
 #greeting {
   font-size: 1.75rem;
 }
