@@ -1,0 +1,65 @@
+h2 {
+  margin-bottom: 2rem;
+}
+
+.card {
+  text-align: center;
+}
+
+.city p {
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.city h2 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.container {
+  background-color: darksalmon;
+  border-radius: 4px;
+  margin-top: 5em;
+  padding: 4rem;
+  width: 100%;
+}
+
+.content {
+  margin: 1rem auto;
+}
+
+.card-body p {
+  margin-bottom: 0;
+}
+
+.card-img-top {
+  width: 40px;
+  display: block;
+  margin: 1rem auto 0;
+}
+
+.future-forecast {
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: antiquewhite;
+  border-radius: 8px;
+}
+
+.searchbar {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.stat-titles {
+  font-weight: bold;
+}
+
+#greeting {
+  font-size: 1.75rem;
+}
+
+#time {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
