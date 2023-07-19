@@ -1,5 +1,6 @@
-h2 {
-  margin-bottom: 2rem;
+h1 {
+  text-align: center;
+  font-size: 4rem;
 }
 
 .card {
@@ -12,8 +13,9 @@ h2 {
 }
 
 .city h2 {
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 .container {
