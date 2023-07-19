@@ -25,6 +25,10 @@ function displayWeather(response) {
   document.querySelector("#current-city").innerHTML = response.data.name;
   document.querySelector("#current-temperature").innerHTML =
     Math.round(response.data.main.temp) + `°`;
+  document.querySelector("#humidity").innerHTML =
+    response.data.main.humidity + `%`;
+  document.querySelector("#winds").innerHTML =
+    Math.round(response.data.wind.speed) + `km/h`;
 }
 
 function search(event) {
@@ -46,6 +50,10 @@ function showCurrentCity(response) {
   let currentTemperature = document.querySelector("#current-temperature");
   currentCity.innerHTML = `${response.data.name}`;
   currentTemperature.innerHTML = `${temperature}°`;
+  document.querySelector("#humidity").innerHTML =
+    response.data.main.humidity + `%`;
+  document.querySelector("#winds").innerHTML =
+    Math.round(response.data.wind.speed) + `km/h`;
 }
 
 function retrievePosition(position) {
