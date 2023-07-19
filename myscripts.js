@@ -21,14 +21,19 @@ time.innerHTML = `${day}, ${hour}:${minutes}`;
 
 // Search form
 
+function displayWeather(response) {
+  document.querySelector("#current-city").innerHTML = response.data.name;
+  document.querySelector("#current-temperature").innerHTML = Math.round(
+    response.data.main.temp
+  );
+}
+
 function search(event) {
   event.preventDefault();
   let apiKey = "5201594abea9f3e38b70e65b11a80c24";
-  let searchCity = "Haarlem";
+  let searchCity = document.querySelector("#search").value;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchCity}&units=metric&appid=${apiKey}`;
-  console.log(apiUrl);
-  // let searchQuery = document.querySelector("#search");
-  // searchCity = document.querySelector("#current-city");
+  axios.get(apiUrl).then(displayWeather);
   // searchCity.innerHTML = `${searchQuery.value}`;
 }
 
