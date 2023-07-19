@@ -54,6 +54,7 @@ function showCurrentCity(response) {
     response.data.main.humidity + `%`;
   document.querySelector("#winds").innerHTML =
     Math.round(response.data.wind.speed) + `km/h`;
+  console.log(response.data);
 }
 
 function retrievePosition(position) {
