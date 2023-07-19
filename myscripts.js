@@ -29,3 +29,21 @@ function search(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
+
+// Show current city
+
+function showCurrentCity(response) {
+  let temperature = Math.round(response.data.main.temp);
+  let currentCity = document.querySelector("#current-city");
+  currentCity.innerHTML = `${response.data.name}, ${temperature}°`;
+}
+
+function retrievePosition(position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let apiKey = "5201594abea9f3e38b70e65b11a80c24";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+  axios.get(apiUrl).then(showCurrentCity);
+}
+
+navigator.geolocation.getCurrentPosition(retrievePosition);
