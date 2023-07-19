@@ -23,9 +23,8 @@ time.innerHTML = `${day}, ${hour}:${minutes}`;
 
 function displayWeather(response) {
   document.querySelector("#current-city").innerHTML = response.data.name;
-  document.querySelector("#current-temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.querySelector("#current-temperature").innerHTML =
+    Math.round(response.data.main.temp) + `°`;
 }
 
 function search(event) {
@@ -34,7 +33,6 @@ function search(event) {
   let searchCity = document.querySelector("#search").value;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchCity}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(displayWeather);
-  // searchCity.innerHTML = `${searchQuery.value}`;
 }
 
 let form = document.querySelector("#search-form");
