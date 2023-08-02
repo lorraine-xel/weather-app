@@ -30,23 +30,6 @@ h1 {
   margin: 1rem auto;
 }
 
-.card-body p {
-  margin-bottom: 0;
-}
-
-.card-img-top {
-  width: 40px;
-  display: block;
-  margin: 1rem auto 0;
-}
-
-.future-forecast {
-  margin-top: 4rem;
-  padding: 2rem;
-  background-color: antiquewhite;
-  border-radius: 8px;
-}
-
 .searchbar {
   position: absolute;
   top: 0.5rem;
@@ -55,6 +38,23 @@ h1 {
 
 .stat-titles {
   font-weight: bold;
+}
+
+.weather-forecast {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
 }
 
 #greeting {
