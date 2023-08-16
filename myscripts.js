@@ -56,11 +56,16 @@ function handleSubmit(event) {
     `searchHistory_${search}`,
     JSON.stringify(searchHistory)
   );
-  searchHistory.reverse();
   console.log(`Search History for Form ${search}:`, searchHistory);
-  document.querySelector("#search1").innerHTML = searchHistory[0];
-  document.querySelector("#search2").innerHTML = searchHistory[1];
-  document.querySelector("#search3").innerHTML = searchHistory[2];
+
+  for (let i = 0; i < recentSearchParagraphs.length; i++) {
+    let index = searchHistory.length - 1 - i;
+    if (index >= 0) {
+      recentSearchParagraphs[i].textContent = `${searchHistory[index]}`;
+    } else {
+      recentSearchParagraphs[i].textContent = ``;
+    }
+  }
   searchCity(city);
 }
 
@@ -80,6 +85,12 @@ function getCurrentLocation(event) {
 let searchForm = document.querySelector("#search-form");
 let searchHistory =
   JSON.parse(localStorage.getItem(`searchHistory_${search}`)) || [];
+
+let recentSearchParagraphs = [
+  document.querySelector("#search1"),
+  document.querySelector("#search2"),
+  document.querySelector("#search3"),
+];
 
 searchForm.addEventListener("submit", handleSubmit);
 
