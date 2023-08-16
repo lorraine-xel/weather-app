@@ -17,24 +17,27 @@
   <body>
     <div class="container">
       <div class="content">
-        <form class="form-inline searchbar" id="search-form">
-          <div class="form-group mx-sm-3 mb-2">
-            <input
-              type="search"
-              class="form-control"
-              id="search"
-              placeholder="Look up a city"
-            />
-          </div>
-          <button type="submit" class="btn btn-primary mb-2">🔍</button>
-          <div class="col-4">
-            <button class="btn btn-success w-100" id="current-location-button">
-              Current
-            </button>
-          </div>
-        </form>
-
         <div class="row">
+          <form class="form-inline searchbar" id="search-form">
+            <div class="form-group mx-sm-2 mb-2">
+              <input
+                type="search"
+                class="form-control"
+                id="search"
+                placeholder="Look up a city"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">🔍</button>
+            <div class="mx-sm-2 mb-2">
+              <button
+                class="btn btn-success w-100"
+                id="current-location-button"
+              >
+                Current
+              </button>
+            </div>
+          </form>
+
           <div class="col statistics">
             <h2>Stats</h2>
             <div class="row">
@@ -62,9 +65,9 @@
 
           <div class="col searches">
             <h2>Recent searches</h2>
-            <p>Damascus</p>
-            <p>Portsmouth</p>
-            <p>Seoul</p>
+            <p id="search1"></p>
+            <p id="search2"></p>
+            <p id="search3"></p>
           </div>
         </div>
         <hr />
