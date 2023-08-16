@@ -31,6 +31,10 @@ h1 {
   margin: 1rem auto;
 }
 
+.credits {
+  margin-top: 3rem;
+}
+
 .searchbar {
   position: absolute;
   top: 0.5rem;
