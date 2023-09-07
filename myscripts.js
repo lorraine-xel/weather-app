@@ -1,24 +1,27 @@
 // Day and time
+function setTime() {
+  let now = new Date();
 
-let now = new Date();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
 
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+  let day = days[now.getDay()];
+  let hour = now.getHours();
+  let minutes = (`0` + now.getMinutes()).slice(-2);
 
-let day = days[now.getDay()];
-let hour = now.getHours();
-let minutes = (`0` + now.getMinutes()).slice(-2);
+  let time = document.querySelector("#time");
+  time.innerHTML = `${day}, ${hour}:${minutes}`;
+}
 
-let time = document.querySelector("#time");
-time.innerHTML = `${day}, ${hour}:${minutes}`;
-
+setTime();
+setInterval(setTime, 500);
 // Search form
 
 function getForecast(coordinates) {
@@ -62,9 +65,10 @@ function handleSubmit(event) {
     let index = searchHistory.length - 1 - i;
     if (index >= 0) {
       recentSearchParagraphs[i].textContent = `${searchHistory[index]}`;
-    } else {
-      recentSearchParagraphs[i].textContent = ``;
     }
+    // else {
+    //   recentSearchParagraphs[i].textContent = ``;
+    // }
   }
   searchCity(city);
 }
